@@ -61,11 +61,8 @@ section {
     text-decoration: none;
     background-color: #ff9999;
 }
-.nav>li>a:visited {
-    color: #ff9999;
-}
-/* Styles for the homepage */
 
+/* Styles for the homepage */
 figure {
     border: 2px solid #daeee9;
     background-color: #daeee9;
