@@ -4,13 +4,14 @@
     <!-- Info from books.json goes here -->
     <div class="book col-sm-4" ng-repeat="item in books">
       <h4 class="text-center">{{item.title}}</h4>
-      <img ng-src="{{item.img}}" alt="{{item.title}}"  class="img-responsive book-img">
+      <img ng-src="{{item.img}}" alt="{{item.title}}" class="img-responsive book-img">
       <h5 class="text-center">Year published: {{item.published}}</h5>
       <details>
         <summary>{{item.short}}</summary>
         <p>{{item.description}}</p>
         <p>Read more about this book at <a href="{{item.more}}" target="_blank">Goodreads.com</a>.</p>
-      </details> 
+      </details>
     </div>
-  </div><!-- end of books grid -->
-</div> <!-- end of row -->
+  </div>
+  <!-- end of books grid -->
+</div><!-- end of row -->
