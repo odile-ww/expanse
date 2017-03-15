@@ -1,0 +1,191 @@
+/* General styles & typography */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    /* 
+    Solution provided by CSS-tricks for a perfect fullpage background image
+     */
+    background: url("planet.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+header {
+    margin-bottom: 20px;
+}
+h1,
+h2 {
+  color: #ff9999;
+  font-weight: bolder;
+}
+h3,
+.lead,
+h4 {
+  color: #daeee9;
+}
+.lead {
+  margin-bottom: 0;
+  font-weight:300;
+}
+main {
+    background: rgba(0, 0, 0, 0.60);
+    max-width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 0.5px solid #daeee9;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(167, 174, 176, 1);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(167, 174, 176, 1);
+    box-shadow: 5px 5px 5px 0px rgba(167, 174, 176, 1);
+}
+section {
+  padding-bottom: 2em;
+}
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation styles */
+.navbar ul li {
+    line-height: 1.3;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navbar ul li a {
+    color: #daeee9;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #ff9999;
+}
+.nav>li>a:visited {
+    color: #ff9999;
+}
+
+/* Styles for the homepage */
+figure {
+    border: 2px solid #daeee9;
+    background-color: #daeee9;
+    padding: 5px;
+    margin: 0.5em;
+}
+figcaption {
+    color: #1f2e2e;
+    padding-top: 5px;
+}
+img {
+    max-width: 100%;
+}
+a {
+  color: #ff9999;
+}
+a:hover {
+  color: #daeee9;
+}
+
+/* Styles for the books page */
+.book {
+  margin-bottom: 1em;
+}
+.book-img {
+  max-height: 300px;
+  margin: 0 auto;
+  border: 5px solid #daeee9;
+}
+summary::-webkit-details-marker {
+  display: none
+}
+summary{
+  outline: none;
+  color: #daeee9;
+}
+summary:before {
+  content: "+"; 
+  color: #ff9999; 
+  float: left; 
+  font-size: 1.5em; 
+  font-weight: bold; 
+  margin: -5px 10px 0 0; 
+  padding: 0; 
+  text-align: center; 
+  width: 1.7em;
+}
+details[open] summary:before {
+  content: "-";
+  border: none;
+}
+
+/* Styles for the quotes page */
+blockquote {
+  border-left: 5px solid #daeee9;
+}
+.fa-quote-right {
+  color: #ff9999;
+  font-size: 1em;
+}
+cite {
+  color: #ff9999;
+}
+
+/* Styles for the poll */
+.poll input[type="radio"] {
+  display: none;
+}
+/* one radio button per line */
+label {
+  display: block;
+  cursor: pointer;
+  line-height: 1.2;
+  font-size: 1.2em;
+}
+[type="radio"] + span {
+  display: block;
+}
+/* the basic, unchecked style */
+[type="radio"] + span:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  border-radius: 1em;
+  border: 0.1em solid #daeee9;
+  box-shadow: 0 0 0 0.15em #ff9999;
+  margin-right: 0.75em;
+  transition: 0.5s ease all;
+}
+/* the checked style using the :checked pseudo class */
+[type="radio"]:checked + span:before {
+  background: #ff9999;
+  box-shadow: 0 0 0 0.15em #daeee9;
+}
+/* focus styling */
+[type="radio"]:focus + span:after {
+  content: '';
+  font-size: 1.5em;
+  line-height: 1;
+  vertical-align: -0.125em;
+  background-color: #ff9999;
+}
+fieldset {
+  font-size: 1em;
+  border: 2px solid #daeee9;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+legend {
+  color: #ff9999;
+  background: #daeee9;
+  padding: 0.25em 1em;
+  border-radius: 1em;
+  margin-bottom: 0;
+}
+.table {
+  margin-bottom: 0;
+}

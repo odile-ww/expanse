@@ -1,0 +1,43 @@
+<script type="text/javascript">
+function getVote(int) {
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("poll").innerHTML=this.responseText;
+      document.getElementById("votedmess").innerHTML="Thank You for Voting!";
+    }
+  }
+  xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+  xmlhttp.send();
+}
+</script>
+<header> 
+<h2 class="text-center text-uppercase">Welcome to The Expanse Poll</h2>
+<p class="text-center lead" id="votedmess">Choose your favorite Expanse novel from the list below</p>
+</header>
+
+<div id="poll" class="row">
+	<form class="poll">
+    <fieldset class="col-md-8 col-md-offset-2">
+      <legend>What is your favorite Expanse book so far?</legend>
+
+      <label for="leviathan"><input type="radio" name="vote" value="0" id="leviathan" onclick="getVote(this.value)"><span class="radio">Leviathan Wakes</span></label>
+
+      <label for="caliban"><input type="radio" name="vote" value="1" id="caliban" onclick="getVote(this.value)"><span class="radio">Caliban's War</span></label>
+
+      <label for="abaddon"><input type="radio" name="vote" value="2" id="abaddon" onclick="getVote(this.value)"><span class="radio">Abaddon's Gate</span></label>
+
+      <label for="cibola"><input type="radio" name="vote" value="3" id="cibola" onclick="getVote(this.value)"><span class="radio">Cibola Burn</span></label>
+
+      <label for="nemesis"><input type="radio" name="vote" value="4" id="nemesis" onclick="getVote(this.value)"><span class="radio">Nemesis Games</span></label>
+
+      <label for="babylon"><input type="radio" name="vote" value="5" id="babylon" onclick="getVote(this.value)"><span class="radio">Babylon's Ashes</span></label>
+
+    </fieldset>
+  </form>
+</div>
